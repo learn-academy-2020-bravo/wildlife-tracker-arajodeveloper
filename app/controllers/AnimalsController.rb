@@ -40,7 +40,7 @@ class AnimalsController < ApplicationController
 
   private
   def animal_params
-    params.require(:animal).permit(:common_name, :latin_name, :kingdom)
+    params.require(:animal).permit(:common_name, :latin_name, :kingdom, sightings_attributes:[:id, :start_time, :action])
   end
 
 

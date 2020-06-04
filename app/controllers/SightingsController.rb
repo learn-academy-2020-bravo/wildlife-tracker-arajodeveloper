@@ -40,6 +40,6 @@ class SightingsController < ApplicationController
     
       private
       def sighting_params
-        params.require(:sighting).permit(:animal_id, :date, :latitude, :longtitude, :start_date, :end_date)
+        params.require(:sighting).permit(:animal_id, :date, :latitude, :longtitude, :start_date, :end_date, :action)
       end
 end
