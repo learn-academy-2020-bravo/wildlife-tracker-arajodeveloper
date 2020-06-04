@@ -24,7 +24,8 @@ class AnimalsController < ApplicationController
     if animal.valid?
       render json: animal
     else
-      render json: animal.errors
+      render json: 'validations_errors', :status => 422
+      # render json: animal.errors
     end
   end
 
@@ -33,7 +34,7 @@ class AnimalsController < ApplicationController
     if animal.valid?
       render json: animal
     else
-      render json: animal.errors
+      render json: 'validations_errors', :status => 422
     end
   end
 
